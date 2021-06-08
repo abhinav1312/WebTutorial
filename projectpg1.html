@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            margin:auto;
+            list-style: none;
+            background-color: rgb(169, 169, 255);
+            padding:20px;
+            border: 5px solid rgb(84, 13, 199);
+            width:50%;
+            top:100px;
+            position:relative;
+            
+            
+        }
+        #wrapper li{
+            margin:20px;
+            display:flex;
+            flex-wrap: wrap;
+            position:relative;
+                      
+        }
+        #wrapper li input{
+            flex:3;
+        }
+        #wrapper li label{
+
+            flex:1;
+        }
+        #image{
+            
+            background-image: url("img1.jpeg");
+            opacity:0.2;
+            position:absolute;
+            background-size: cover;
+            top:0%;
+            right:0%;
+            bottom:0%;
+            left:0%;
+        }
+
+    
+        
+    </style>
+</head>
+<body>
+    
+    <div id="image"></div>
+    <div>
+    <h1>Name: ABHINAV SRIVASTAVA</h1>
+    <h1> Reg no. : 20BCY10211</h1>
+    </div>
+    
+    <div id="wrapper">
+    <form name="details" action="projectpg2.html" onsubmit="return alert_msg()" >
+        <ul>
+            <li>
+                <label for="name">Name :</label>
+                <input type="text" name="name">
+            </li>
+            <li>
+                <label for="reg_no">Registration no. :</label>
+                <input type="text" name="reg_no">
+            </li>
+            <li>
+                <label for="City">City:</label>
+                <input type="text" name="city">
+            </li>
+            <li>  
+                <label for="mob_no">Mobile number:</label>
+                <input type="number" size="10" name="mob_no">
+            </li>
+            <li>
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+            </li>
+            <li>
+                <input type="reset">
+                <input type="submit" >
+            </li>
+            </ul>
+
+        </form>
+        </div>
+        
+        </div>
+        
+
+
+        
+    
+       
+    <script>
+        var c1=document.forms["details"]["name"];
+            var c2=document.forms["details"]["reg_no"];
+            var c3=document.forms["details"]["city"];
+            var c4=document.forms["details"]["password"];
+            var c5=document.forms["details"]["mob_no"];
+        function alert_msg(){
+            if(c1.value=="" || c2.value=="" || c3.value=="" || c4.value=="" || c5.value==""){
+                alert("Please fill all the fields");
+                return false;
+            }
+            else{
+                var b=confirm("Thank you! Click OK to play the game");
+                if (b==true){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
